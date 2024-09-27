@@ -7,16 +7,25 @@ export class Vehiculo {
     private titular: string;
     
     constructor (tipo: string, marca: string, modelo: string, patente: string, titular: string, anio?: number) {
+        this.setTipo(tipo);
+        this.setMarca(marca);
+        this.setModelo(modelo);
+        this.setPatente(patente);
+        this.setTitular(titular);
+        
+        /*
         this.tipo = tipo;
         this.marca = marca;
+        this.titular = titular;
         this.modelo = modelo;
         this.patente = patente;
-        this.titular = titular;
+        */
 
         if (anio == undefined) 
             this.anio = -1;
         else
-            this.anio = anio;
+            this.setAnio(anio);
+            //this.anio = anio;
     }
     
     // si no indico el modificador de acceso, por default es public
@@ -58,8 +67,10 @@ export class Vehiculo {
     }
 
     setMarca (marca: string): void {
-        if (marca!=undefined && (marca=="Ford" || marca=="Chevrolet" || marca=="Fiat" || marca=="Volskwagen" || marca=="Toyota" || marca=="Scania" || marca=="Yamaha")) {
+        if (marca!=undefined && (marca=="Ford" || marca=="Chevrolet" || marca=="Fiat" || marca=="Volkswagen" || marca=="Toyota" || marca=="Scania" || marca=="Yamaha")) {
             this.marca = marca;
+        } else {
+            this.marca = "N/D"
         }
     }
 

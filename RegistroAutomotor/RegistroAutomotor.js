@@ -11,10 +11,6 @@ var RegistroAutomotor = /** @class */ (function () {
         return this.nombre;
     };
     RegistroAutomotor.prototype.getListaVehiculos = function () {
-        // ... se llama spread, se usa para copiar todo un arreglo
-        // Para no romper el encapsulamiento, lo mejor es crear una copia del arreglo y su contenido   
-        //const copiaListaVehiculos: Vehiculo[] = this.listaVehiculos.map(vehi => ({...vehi}) as Vehiculo);
-        //return copiaListaVehiculos;
         return this.listaVehiculos;
     };
     // setters
@@ -23,11 +19,6 @@ var RegistroAutomotor = /** @class */ (function () {
             this.nombre = nombre;
         }
     };
-    /*
-    setListaVehiculos (listaVehiculos: Vehiculo[]): void {
-        this.listaVehiculos = listaVehiculos;
-    }
-    */
     /*
     agregarVehiculo(tipo: string, marca: string, modelo: string, anio:number, patente: string, titular: string ): void {
         let nuevoVehiculo: Vehiculo = new Vehiculo(tipo, marca, modelo, anio, patente, titular);
@@ -39,7 +30,30 @@ var RegistroAutomotor = /** @class */ (function () {
             this.listaVehiculos.push(vehiculo);
         }
     };
-    RegistroAutomotor.prototype.modificarVehiculo = function () {
+    RegistroAutomotor.prototype.modificarVehiculo = function (vehiculoModificar, tipo, marca, modelo, patente, titular, anio) {
+        // chequeo que venga algo por parámetro vehículo y que esté en el listado
+        if (vehiculoModificar != undefined && this.listaVehiculos.indexOf(vehiculoModificar) >= 0) {
+            var posicionVehiculo = this.listaVehiculos.indexOf(vehiculoModificar);
+            // chequeo cada parámetro para saber cuál se modifica
+            if (tipo != undefined && tipo != null) {
+                this.listaVehiculos[posicionVehiculo].setTipo(tipo);
+            }
+            if (marca != undefined && marca != null) {
+                this.listaVehiculos[posicionVehiculo].setMarca(marca);
+            }
+            if (modelo != undefined && modelo != null) {
+                this.listaVehiculos[posicionVehiculo].setModelo(modelo);
+            }
+            if (patente != undefined && patente != null) {
+                this.listaVehiculos[posicionVehiculo].setPatente(patente);
+            }
+            if (titular != undefined && titular != null) {
+                this.listaVehiculos[posicionVehiculo].setTitular(titular);
+            }
+            if (anio != undefined && anio != null) {
+                this.listaVehiculos[posicionVehiculo].setAnio(anio);
+            }
+        }
     };
     RegistroAutomotor.prototype.bajaVehiculo = function (vehiculoEliminar) {
         // chequeo que venga algo por parámetro y chequeo que el vehículo esté en el listado

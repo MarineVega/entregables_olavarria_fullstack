@@ -14,13 +14,7 @@ export class RegistroAutomotor {
         return this.nombre;
     }
 
-    getListaVehiculos(): Vehiculo[] {     
-        // ... se llama spread, se usa para copiar todo un arreglo
-        // Para no romper el encapsulamiento, lo mejor es crear una copia del arreglo y su contenido   
-        //const copiaListaVehiculos: Vehiculo[] = this.listaVehiculos.map(vehi => ({...vehi}) as Vehiculo);
-        
-        //return copiaListaVehiculos;
-
+    getListaVehiculos(): Vehiculo[] {
         return this.listaVehiculos;
     }
 
@@ -30,11 +24,7 @@ export class RegistroAutomotor {
             this.nombre = nombre;
         }
     }
-    /*
-    setListaVehiculos (listaVehiculos: Vehiculo[]): void {
-        this.listaVehiculos = listaVehiculos;
-    }
-    */
+    
     /*
     agregarVehiculo(tipo: string, marca: string, modelo: string, anio:number, patente: string, titular: string ): void {
         let nuevoVehiculo: Vehiculo = new Vehiculo(tipo, marca, modelo, anio, patente, titular);
@@ -48,9 +38,37 @@ export class RegistroAutomotor {
         }        
     }
 
-    modificarVehiculo () {
-        
+    modificarVehiculo (vehiculoModificar: Vehiculo, tipo?: string, marca?: string, modelo?: string, patente?: string, titular?: string, anio?:number): void {
+        // chequeo que venga algo por parámetro vehículo y que esté en el listado
+        if (vehiculoModificar!=undefined && this.listaVehiculos.indexOf(vehiculoModificar)>=0) { 
 
+            const posicionVehiculo: number = this.listaVehiculos.indexOf(vehiculoModificar);
+
+            // chequeo cada parámetro para saber cuál se modifica
+            if (tipo!=undefined && tipo!=null) {
+                this.listaVehiculos[posicionVehiculo].setTipo(tipo);
+            }
+
+            if (marca!=undefined && marca!=null) {
+                this.listaVehiculos[posicionVehiculo].setMarca(marca);
+            }
+
+            if (modelo!=undefined && modelo!=null) {
+                this.listaVehiculos[posicionVehiculo].setModelo(modelo);
+            }
+            
+            if (patente!=undefined && patente!=null) {
+                this.listaVehiculos[posicionVehiculo].setPatente(patente);                
+            }
+            
+            if (titular!=undefined && titular!=null) {
+                this.listaVehiculos[posicionVehiculo].setTitular(titular);
+            }
+
+            if (anio!=undefined && anio!=null) {
+                this.listaVehiculos[posicionVehiculo].setAnio(anio);
+            }
+        }
     }
 
     bajaVehiculo (vehiculoEliminar: Vehiculo): void {

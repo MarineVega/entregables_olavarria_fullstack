@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var Vehiculo_1 = require("./Vehiculo");
 var RegistroAutomotor_1 = require("./RegistroAutomotor");
 // Creo vehículos
-var vehiculo1 = new Vehiculo_1.Vehiculo("Auto", "Ford", "Fiesta", "MNA321", "Sandra Perez", 2013);
+var vehiculo1 = new Vehiculo_1.Vehiculo("Auto", "Ford2", "Fiesta", "MNA321", "Sandra Perez", 2013);
 var vehiculo2 = new Vehiculo_1.Vehiculo("Auto", "Ford", "Mondeo", "AF254PM", "Mario Lopez", 2023);
 var vehiculo3 = new Vehiculo_1.Vehiculo("Moto", "Yamaha", "FZ 250", "D487AAT", "Javier Leal", 2024);
 var vehiculo4 = new Vehiculo_1.Vehiculo("Moto", "Yamaha", "FZ 250", "D487AAU", "Javier Leal", 2024);
@@ -17,16 +17,13 @@ registroAutomotor1.agregarVehiculo(vehiculo2);
 registroAutomotor1.agregarVehiculo(vehiculo3);
 registroAutomotor1.agregarVehiculo(vehiculo4);
 registroAutomotor1.agregarVehiculo(vehiculo5);
-/*
-console.log(vehiculo1);
-console.log(vehiculo2);
-console.log(registroAutomotor1);
-console.log(registroAutomotor2);
-*/
 // Ver lista de Vehículos del registro 1        --> map muestra en una línea lo q está en un arreglo
 console.log("Vehículos del ", registroAutomotor1.getNombre(), ": ", registroAutomotor1.getListaVehiculos().map(function (vehiculo) { return vehiculo.getVehiculo(); }));
 // Elimino un vehículo del registro
 registroAutomotor1.bajaVehiculo(vehiculo2);
 // Ver lista de Vehículos del registro 1        --> map muestra en una línea lo q está en un arreglo
-console.log("Vehículos del ", registroAutomotor1.getNombre(), ": ", registroAutomotor1.getListaVehiculos().map(function (vehiculo) { return vehiculo.getVehiculo(); }));
-// Modifico un vehículo del registro
+console.log("Vehículos del ", registroAutomotor1.getNombre(), " (dsps de Eliminar): ", registroAutomotor1.getListaVehiculos().map(function (vehiculo) { return vehiculo.getVehiculo(); }));
+// Modifico vehículo del registro
+registroAutomotor1.modificarVehiculo(vehiculo4, null, null, null, "D887AAU", null, null);
+registroAutomotor1.modificarVehiculo(vehiculo5, null, null, null, null, null, 2003);
+console.log("Vehículos del ", registroAutomotor1.getNombre(), "(dsps de Modificar): ", registroAutomotor1.getListaVehiculos().map(function (vehiculo) { return vehiculo.getVehiculo(); }));

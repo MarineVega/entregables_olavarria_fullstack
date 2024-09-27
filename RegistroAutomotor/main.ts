@@ -2,7 +2,7 @@ import { Vehiculo } from "./Vehiculo";
 import { RegistroAutomotor } from "./RegistroAutomotor";
 
 // Creo vehículos
-const vehiculo1: Vehiculo = new Vehiculo("Auto", "Ford", "Fiesta", "MNA321", "Sandra Perez", 2013);
+const vehiculo1: Vehiculo = new Vehiculo("Auto", "Ford2", "Fiesta", "MNA321", "Sandra Perez", 2013);
 const vehiculo2: Vehiculo = new Vehiculo("Auto", "Ford", "Mondeo", "AF254PM", "Mario Lopez", 2023);
 const vehiculo3: Vehiculo = new Vehiculo("Moto", "Yamaha", "FZ 250", "D487AAT", "Javier Leal", 2024);
 const vehiculo4: Vehiculo = new Vehiculo("Moto", "Yamaha", "FZ 250", "D487AAU", "Javier Leal", 2024);
@@ -19,12 +19,6 @@ registroAutomotor1.agregarVehiculo(vehiculo3);
 registroAutomotor1.agregarVehiculo(vehiculo4);
 registroAutomotor1.agregarVehiculo(vehiculo5);
 
-/*
-console.log(vehiculo1);
-console.log(vehiculo2);
-console.log(registroAutomotor1);
-console.log(registroAutomotor2);
-*/
 
 // Ver lista de Vehículos del registro 1        --> map muestra en una línea lo q está en un arreglo
 console.log("Vehículos del ", registroAutomotor1.getNombre(), ": " , registroAutomotor1.getListaVehiculos().map(vehiculo => vehiculo.getVehiculo()));
@@ -35,7 +29,11 @@ registroAutomotor1.bajaVehiculo(vehiculo2);
 
 
 // Ver lista de Vehículos del registro 1        --> map muestra en una línea lo q está en un arreglo
-console.log("Vehículos del ", registroAutomotor1.getNombre(), ": " , registroAutomotor1.getListaVehiculos().map(vehiculo => vehiculo.getVehiculo()));
+console.log("Vehículos del ", registroAutomotor1.getNombre(), " (dsps de Eliminar): " , registroAutomotor1.getListaVehiculos().map(vehiculo => vehiculo.getVehiculo()));
 
-// Modifico un vehículo del registro
+// Modifico vehículo del registro
+registroAutomotor1.modificarVehiculo(vehiculo4,null,null,null,"D887AAU",null,null);
+registroAutomotor1.modificarVehiculo(vehiculo5,null,null,null,null,null,2003);
+
+console.log("Vehículos del ", registroAutomotor1.getNombre(), "(dsps de Modificar): " , registroAutomotor1.getListaVehiculos().map(vehiculo => vehiculo.getVehiculo()));
 
