@@ -18,17 +18,22 @@ fetch("https://rickandmortyapi.com/api/character")
 let url = "https://rickandmortyapi.com/api/character"
 
 async function mostrarPersonajes() {
-    let respuesta = await fetch(url)
-    let data = await respuesta.json()
+    try{
+        let respuesta = await fetch(url)
+        let data = await respuesta.json()
+    
+        data.results.forEach(personaje => {
+            contenedor.innerHTML +=`<div class="cardPersonaje">
+                                        <h2>${personaje.name} </h2>
+                                        <img src=${personaje.image}>
+                                        <h4>Género: ${personaje.gender}</h4>
+                                        <h4>Especie: ${personaje.species}</h4>
+                                    </div>`
+        });  
 
-    data.results.forEach(personaje => {
-        contenedor.innerHTML +=`<div class="cardPersonaje">
-                                    <h2>${personaje.name} </h2>
-                                    <img src=${personaje.image}>
-                                    <h4>Género: ${personaje.gender}</h4>
-                                    <h4>Especie: ${personaje.species}</h4>
-                                </div>`
-    });  
+    } catch(error) {
+        console.log(`Ocurrió un error ${error}`)
+    }
 }
 
 mostrarPersonajes();
