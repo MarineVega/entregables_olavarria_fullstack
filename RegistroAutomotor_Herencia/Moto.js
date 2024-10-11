@@ -44,6 +44,9 @@ var Moto = /** @class */ (function (_super) {
     Moto.prototype.getFrenoADisco = function () {
         return this.frenoADisco;
     };
+    Moto.prototype.getMoto = function () {
+        return this.marca + " " + this.modelo + " Año " + this.anio + " Patente: " + this.patente + " Titular " + this.titular + " Cilindrada " + this.cilindrada + " Tiene Freno a Disco? " + this.frenoADisco;
+    };
     return Moto;
 }(Vehiculo_1.Vehiculo));
 exports.Moto = Moto;

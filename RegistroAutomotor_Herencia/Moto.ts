@@ -32,4 +32,8 @@ export class Moto extends Vehiculo {
     getFrenoADisco(): boolean {
         return this.frenoADisco;
     }
+
+    getMoto(): string {
+        return this.marca + " " + this.modelo + " Año " + this.anio + " Patente: " + this.patente + " Titular " + this.titular + " Cilindrada " + this.cilindrada + " Tiene Freno a Disco? " + this.frenoADisco;
+    }
 }
