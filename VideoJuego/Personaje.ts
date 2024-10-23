@@ -1,11 +1,13 @@
 export abstract class Personaje {
     protected nombre: string;
-    protected puntosDeVida: number;
+    protected vida: number;
     protected nivel: number = 1;
+    protected habilidad: string;
 
-    constructor (nombre: string, puntosDeVida: number) {
+    constructor (nombre: string, vida: number, habilidad: string) {
         this.nombre = nombre;
-        this.puntosDeVida = puntosDeVida;
+        this.vida = vida;
+        this.habilidad = habilidad;
     }
        
     abstract atacar (): void;
@@ -13,12 +15,15 @@ export abstract class Personaje {
 
     abstract mostrarDatos (): string;
 
+    //abstract getHabilidad (): string;
+    //abstract setHabilidad (habilidad: string): void;
+
     aumentarVida (cantidad: number): void {
-        this.puntosDeVida += cantidad;
+        this.vida += cantidad;
     };
     
     disminuirVida (cantidad: number): void {
-        this.puntosDeVida -= cantidad;
+        this.vida -= cantidad;
     };
     
     subirNivel (nivel: number): void {
@@ -27,7 +32,19 @@ export abstract class Personaje {
     
     bajarNivel (nivel: number): void {
         this.nivel -= nivel;
-    };  
+    };
+
+    getHabilidad(): string {
+        return this.habilidad;
+    }
+
+    setHabilidad(habilidad: string): void {
+        this.habilidad = habilidad;
+    }
+    
+    setNivel (nivel: number): void {
+        this.nivel = nivel;
+    }
 }
 
 

@@ -19,8 +19,8 @@ exports.Mago = void 0;
 var Personaje_1 = require("./Personaje");
 var Mago = /** @class */ (function (_super) {
     __extends(Mago, _super);
-    function Mago(nombre, puntosDeVida) {
-        return _super.call(this, nombre, puntosDeVida) || this;
+    function Mago(nombre, vida, habilidad) {
+        return _super.call(this, nombre, vida, habilidad) || this;
     }
     Mago.prototype.atacar = function () {
         console.log("El Mago ".concat(this.nombre, " est\u00E1 atacando con magia b\u00E1sica"));
@@ -29,7 +29,10 @@ var Mago = /** @class */ (function (_super) {
         console.log("El Mago ".concat(this.nombre, " se est\u00E1 defendiendo"));
     };
     Mago.prototype.mostrarDatos = function () {
-        return "Personaje: Mago - Nombre: " + this.nombre + " - Vida: " + this.puntosDeVida + " - Nivel: " + this.nivel;
+        return "Personaje: Mago - Nombre: " + this.nombre + " - Vida: " + this.vida + " - Nivel: " + this.nivel + " - Habilidad: " + this.habilidad;
+    };
+    Mago.prototype.getAtaque = function () {
+        this.ataque.MostrarAtaque();
     };
     return Mago;
 }(Personaje_1.Personaje));

@@ -19,8 +19,8 @@ exports.Arquero = void 0;
 var Personaje_1 = require("./Personaje");
 var Arquero = /** @class */ (function (_super) {
     __extends(Arquero, _super);
-    function Arquero(nombre, puntosDeVida) {
-        return _super.call(this, nombre, puntosDeVida) || this;
+    function Arquero(nombre, vida, habilidad) {
+        return _super.call(this, nombre, vida, habilidad) || this;
     }
     Arquero.prototype.atacar = function () {
         console.log("El Arquero ".concat(this.nombre, " est\u00E1 atacando"));
@@ -29,7 +29,7 @@ var Arquero = /** @class */ (function (_super) {
         console.log("El Arquero ".concat(this.nombre, " se est\u00E1 defendiendo"));
     };
     Arquero.prototype.mostrarDatos = function () {
-        return "Personaje: Arquero - Nombre: " + this.nombre + " - Vida: " + this.puntosDeVida + " - Nivel: " + this.nivel;
+        return "Personaje: Arquero - Nombre: " + this.nombre + " - Vida: " + this.vida + " - Nivel: " + this.nivel + " - Habilidad: " + this.habilidad;
     };
     return Arquero;
 }(Personaje_1.Personaje));

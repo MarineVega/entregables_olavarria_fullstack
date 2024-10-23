@@ -19,8 +19,8 @@ exports.Luchador = void 0;
 var Personaje_1 = require("./Personaje");
 var Luchador = /** @class */ (function (_super) {
     __extends(Luchador, _super);
-    function Luchador(nombre, puntosDeVida) {
-        return _super.call(this, nombre, puntosDeVida) || this;
+    function Luchador(nombre, vida, habilidad) {
+        return _super.call(this, nombre, vida, habilidad) || this;
     }
     Luchador.prototype.atacar = function () {
         console.log("El Luchador ".concat(this.nombre, " est\u00E1 atacando"));
@@ -29,7 +29,7 @@ var Luchador = /** @class */ (function (_super) {
         console.log("El Luchador ".concat(this.nombre, " se est\u00E1 defendiendo"));
     };
     Luchador.prototype.mostrarDatos = function () {
-        return "Personaje: Luchador - Nombre: " + this.nombre + " - Vida: " + this.puntosDeVida + " - Nivel: " + this.nivel;
+        return "Personaje: Luchador - Nombre: " + this.nombre + " - Vida: " + this.vida + " - Nivel: " + this.nivel + " - Habilidad: " + this.habilidad;
     };
     return Luchador;
 }(Personaje_1.Personaje));

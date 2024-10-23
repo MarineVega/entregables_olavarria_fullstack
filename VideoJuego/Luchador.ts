@@ -2,9 +2,9 @@ import { Personaje } from "./Personaje";
 
 export class Luchador extends Personaje {
 
-    constructor (nombre: string, puntosDeVida: number)
+    constructor (nombre: string, vida: number, habilidad: string)
     {   
-        super(nombre, puntosDeVida)
+        super (nombre, vida, habilidad); 
     }
 
     atacar(): void {
@@ -16,7 +16,7 @@ export class Luchador extends Personaje {
     }
 
     mostrarDatos(): string {
-        return "Personaje: Luchador - Nombre: " + this.nombre + " - Vida: " + this.puntosDeVida + " - Nivel: " + this.nivel
+        return "Personaje: Luchador - Nombre: " + this.nombre + " - Vida: " + this.vida + " - Nivel: " + this.nivel + " - Habilidad: " + this.habilidad
     }
     
 }

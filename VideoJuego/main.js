@@ -1,9 +1,13 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var Mago_1 = require("./Mago");
+var Luchador_1 = require("./Luchador");
+var Arquero_1 = require("./Arquero");
 var MagoEvolucionado_1 = require("./MagoEvolucionado");
-var mago1 = new Mago_1.Mago('Merlín', 3);
-console.log(mago1);
+console.log(" ");
+console.log(" ******************************************** PERSONAJE: MAGO *********************************************");
+var mago1 = new Mago_1.Mago("Merlín", 3, "Magia");
+//console.log(mago1);
 mago1.atacar();
 mago1.aumentarVida(2);
 mago1.subirNivel(3);
@@ -12,12 +16,22 @@ mago1.defender();
 mago1.disminuirVida(3);
 mago1.bajarNivel(2);
 console.log(mago1.mostrarDatos());
-mago1 = new MagoEvolucionado_1.MagoEvolucionado('Merlín', 3);
-console.log(mago1.mostrarDatos());
-/*
-let luchador1: Luchador = new Luchador ('Thor', 5);
-let luchador2: Luchador = new Luchador ('Ragnar', 7);
-
+var mago2 = new Mago_1.Mago("Gandalf", 7, "Magia");
+console.log(mago2.mostrarDatos());
+console.log(" ");
+console.log(" ------------------------------------------- MAGO Evolucionado -------------------------------------------");
+mago2 = new MagoEvolucionado_1.MagoEvolucionado("Gandalf", 10, "Magia de Luz");
+console.log(mago2.mostrarDatos());
+(mago2).crearIlusion();
+console.log(" ");
+console.log(" ------------------------------------------- MAGO que encontró una caja -------------------------------------------");
+var ataque;
+ataque.MostrarAtaque();
+//mago1.getAtaque();
+console.log(" ");
+console.log(" ******************************************** PERSONAJE: LUCHADOR *********************************************");
+var luchador1 = new Luchador_1.Luchador("Thor", 5, "Fuerza");
+var luchador2 = new Luchador_1.Luchador("Ragnar", 7, "Estratega");
 console.log(luchador1.mostrarDatos());
 luchador1.atacar();
 luchador1.aumentarVida(10);
@@ -27,11 +41,11 @@ luchador1.defender();
 luchador1.disminuirVida(3);
 luchador1.bajarNivel(2);
 console.log(luchador1.mostrarDatos());
-
 luchador2.atacar();
 luchador2.defender();
-
-let arquero1: Arquero = new Arquero ('Robin Hood', 4);
+console.log(" ");
+console.log(" ******************************************** PERSONAJE: ARQUERO *********************************************");
+var arquero1 = new Arquero_1.Arquero("Robin Hood", 4, "Puntería");
 console.log(arquero1.mostrarDatos());
 arquero1.atacar();
 arquero1.aumentarVida(8);
@@ -41,4 +55,3 @@ arquero1.defender();
 arquero1.disminuirVida(1);
 arquero1.bajarNivel(1);
 console.log(arquero1.mostrarDatos());
-*/

@@ -19,8 +19,10 @@ exports.MagoEvolucionado = void 0;
 var Mago_1 = require("./Mago");
 var MagoEvolucionado = /** @class */ (function (_super) {
     __extends(MagoEvolucionado, _super);
-    function MagoEvolucionado(nombre, puntosDeVida) {
-        return _super.call(this, nombre, puntosDeVida) || this;
+    function MagoEvolucionado(nombre, vida, habilidad) {
+        var _this = _super.call(this, nombre, vida, habilidad) || this;
+        _this.setNivel(15);
+        return _this;
     }
     MagoEvolucionado.prototype.crearIlusion = function () {
         console.log("".concat(this.nombre, " crea ilusi\u00F3n de tormenta el\u00E9ctrica"));

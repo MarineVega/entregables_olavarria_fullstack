@@ -2,11 +2,10 @@ import { Personaje } from "./Personaje";
 
 export class Arquero extends Personaje {
     
-    constructor (nombre: string, puntosDeVida: number) 
-    {
-        super(nombre, puntosDeVida);
+    constructor (nombre: string, vida: number, habilidad: string) {
+        super (nombre, vida, habilidad);
     }
-    
+        
     atacar(): void {
         console.log (`El Arquero ${this.nombre} está atacando`);
     }
@@ -16,7 +15,7 @@ export class Arquero extends Personaje {
     }
 
     mostrarDatos(): string {
-        return "Personaje: Arquero - Nombre: " + this.nombre + " - Vida: " + this.puntosDeVida + " - Nivel: " + this.nivel
+        return "Personaje: Arquero - Nombre: " + this.nombre + " - Vida: " + this.vida + " - Nivel: " + this.nivel + " - Habilidad: " + this.habilidad
     }
 
 }
