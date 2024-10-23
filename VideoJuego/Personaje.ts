@@ -29,3 +29,5 @@ export abstract class Personaje {
         this.nivel -= nivel;
     };  
 }
+
+

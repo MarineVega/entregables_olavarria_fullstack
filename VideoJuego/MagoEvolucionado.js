@@ -15,22 +15,19 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Mago = void 0;
-var Personaje_1 = require("./Personaje");
-var Mago = /** @class */ (function (_super) {
-    __extends(Mago, _super);
-    function Mago(nombre, puntosDeVida) {
+exports.MagoEvolucionado = void 0;
+var Mago_1 = require("./Mago");
+var MagoEvolucionado = /** @class */ (function (_super) {
+    __extends(MagoEvolucionado, _super);
+    function MagoEvolucionado(nombre, puntosDeVida) {
         return _super.call(this, nombre, puntosDeVida) || this;
     }
-    Mago.prototype.atacar = function () {
-        console.log("El Mago ".concat(this.nombre, " est\u00E1 atacando con magia b\u00E1sica"));
+    MagoEvolucionado.prototype.crearIlusion = function () {
+        console.log("".concat(this.nombre, " crea ilusi\u00F3n de tormenta el\u00E9ctrica"));
     };
-    Mago.prototype.defender = function () {
-        console.log("El Mago ".concat(this.nombre, " se est\u00E1 defendiendo"));
+    MagoEvolucionado.prototype.restaurar = function () {
+        console.log("".concat(this.nombre, " restaura objetos destruidos"));
     };
-    Mago.prototype.mostrarDatos = function () {
-        return "Personaje: Mago - Nombre: " + this.nombre + " - Vida: " + this.puntosDeVida + " - Nivel: " + this.nivel;
-    };
-    return Mago;
-}(Personaje_1.Personaje));
-exports.Mago = Mago;
+    return MagoEvolucionado;
+}(Mago_1.Mago));
+exports.MagoEvolucionado = MagoEvolucionado;

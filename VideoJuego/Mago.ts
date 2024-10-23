@@ -7,7 +7,7 @@ export class Mago extends Personaje {
     }
     
     atacar(): void {
-        console.log (`El Mago ${this.nombre} está atacando`);
+        console.log (`El Mago ${this.nombre} está atacando con magia básica`);
     }
 
     defender(): void {
@@ -18,3 +18,4 @@ export class Mago extends Personaje {
         return "Personaje: Mago - Nombre: " + this.nombre + " - Vida: " + this.puntosDeVida + " - Nivel: " + this.nivel
     }
 }
+

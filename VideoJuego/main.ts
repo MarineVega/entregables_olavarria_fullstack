@@ -1,6 +1,7 @@
 import { Mago } from "./Mago";
 import { Luchador } from "./Luchador";
 import { Arquero } from "./Arquero";
+import { MagoEvolucionado } from "./MagoEvolucionado";
 
 let mago1: Mago = new Mago ('Merlín', 3);
 console.log(mago1);
@@ -14,6 +15,12 @@ mago1.disminuirVida(3);
 mago1.bajarNivel(2);
 console.log(mago1.mostrarDatos());
 
+mago1 = new MagoEvolucionado('Merlín Evolucionado', 3); 
+console.log(mago1.mostrarDatos());
+
+
+
+/*
 let luchador1: Luchador = new Luchador ('Thor', 5);
 let luchador2: Luchador = new Luchador ('Ragnar', 7);
 
@@ -40,4 +47,10 @@ arquero1.defender();
 arquero1.disminuirVida(1);
 arquero1.bajarNivel(1);
 console.log(arquero1.mostrarDatos());
+*/
+
+
+
+
+
 
