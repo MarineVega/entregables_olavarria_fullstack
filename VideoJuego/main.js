@@ -26,12 +26,12 @@ console.log(mago2.mostrarDatos());
 (mago2).crearIlusion();
 console.log(" ");
 console.log(" ------------------------------------------- MAGO que encontró una caja -------------------------------------------");
+// Instancio el ataque
 var ataque_fuego = new Ataque_1.Ataque("Magia con Fuego", "Varita de Oro", 5);
 console.log(" Agrego nuevo ataque encontrado en la caja ");
+// Seteo el ataque al mago
 mago1.setAtaque(ataque_fuego);
 console.log(mago1.mostrarAtaque());
-//console.log(mago1.getAtaque());
-//mago1.getAtaque();
 console.log(" ");
 console.log(" ******************************************** PERSONAJE: LUCHADOR *********************************************");
 var luchador1 = new Luchador_1.Luchador("Thor", 5, "Fuerza");
