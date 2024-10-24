@@ -1,8 +1,12 @@
+import { Ataque } from "./Ataque";
 export abstract class Personaje {
     protected nombre: string;
     protected vida: number;
     protected nivel: number = 1;
     protected habilidad: string;
+    
+    protected ataque: Ataque;       // Composición
+
 
     constructor (nombre: string, vida: number, habilidad: string) {
         this.nombre = nombre;
@@ -14,10 +18,7 @@ export abstract class Personaje {
     abstract defender (): void;
 
     abstract mostrarDatos (): string;
-
-    //abstract getHabilidad (): string;
-    //abstract setHabilidad (habilidad: string): void;
-
+    
     aumentarVida (cantidad: number): void {
         this.vida += cantidad;
     };
@@ -33,11 +34,7 @@ export abstract class Personaje {
     bajarNivel (nivel: number): void {
         this.nivel -= nivel;
     };
-
-    getHabilidad(): string {
-        return this.habilidad;
-    }
-
+    
     setHabilidad(habilidad: string): void {
         this.habilidad = habilidad;
     }
@@ -45,6 +42,19 @@ export abstract class Personaje {
     setNivel (nivel: number): void {
         this.nivel = nivel;
     }
+    
+    setAtaque (nuevoAtaque: Ataque): void {
+        this.ataque = nuevoAtaque;
+    }
+    
+    getHabilidad(): string {
+        return this.habilidad;
+    }
+
+    mostrarAtaque (): string {
+        return this.ataque.mostrarAtaque();
+    }
+
 }
 
 

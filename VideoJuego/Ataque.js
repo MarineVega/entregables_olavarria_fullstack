@@ -12,13 +12,9 @@ var Ataque = /** @class */ (function () {
         this.arma = arma;
         this.danio = danio;
     }
-    /*
-        MostrarAtaque(): string {
-            return "Ataque " + this.nombre + " Arma: " + this.arma + " - Daño: " + this.danio
-        }
-    */
-    Ataque.prototype.MostrarAtaque = function () {
-        console.log("Ataque " + this.nombre + " Arma: " + this.arma + " - Daño: " + this.danio);
+    Ataque.prototype.mostrarAtaque = function () {
+        return ("Ataque " + this.nombre + " Arma: " + this.arma + " - Daño: " + this.danio);
+        //return "Ataque " + this.nombre + " Arma: " + this.arma + " - Daño: " + this.danio; 
     };
     return Ataque;
 }());

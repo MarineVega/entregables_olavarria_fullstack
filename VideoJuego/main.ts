@@ -34,9 +34,14 @@ console.log(mago2.mostrarDatos());
 
 console.log(" ");
 console.log(" ------------------------------------------- MAGO que encontró una caja -------------------------------------------");
-let ataque: Ataque;
-ataque.MostrarAtaque();
-//mago1.getAtaque();
+
+// Instancio el ataque
+const ataque_fuego: Ataque = new Ataque ("Magia con Fuego","Varita de Oro",5);
+
+console.log(" Agrego nuevo ataque encontrado en la caja ")
+// Seteo el ataque al mago
+mago1.setAtaque(ataque_fuego);
+console.log(mago1.mostrarAtaque());
 
 console.log(" ");
 console.log(" ******************************************** PERSONAJE: LUCHADOR *********************************************");

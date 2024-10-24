@@ -26,14 +26,20 @@ var Personaje = /** @class */ (function () {
         this.nivel -= nivel;
     };
     ;
-    Personaje.prototype.getHabilidad = function () {
-        return this.habilidad;
-    };
     Personaje.prototype.setHabilidad = function (habilidad) {
         this.habilidad = habilidad;
     };
     Personaje.prototype.setNivel = function (nivel) {
         this.nivel = nivel;
+    };
+    Personaje.prototype.setAtaque = function (nuevoAtaque) {
+        this.ataque = nuevoAtaque;
+    };
+    Personaje.prototype.getHabilidad = function () {
+        return this.habilidad;
+    };
+    Personaje.prototype.mostrarAtaque = function () {
+        return this.ataque.mostrarAtaque();
     };
     return Personaje;
 }());

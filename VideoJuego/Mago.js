@@ -19,6 +19,7 @@ exports.Mago = void 0;
 var Personaje_1 = require("./Personaje");
 var Mago = /** @class */ (function (_super) {
     __extends(Mago, _super);
+    //private magia: string = "Posión Mágica"
     function Mago(nombre, vida, habilidad) {
         return _super.call(this, nombre, vida, habilidad) || this;
     }
@@ -30,9 +31,6 @@ var Mago = /** @class */ (function (_super) {
     };
     Mago.prototype.mostrarDatos = function () {
         return "Personaje: Mago - Nombre: " + this.nombre + " - Vida: " + this.vida + " - Nivel: " + this.nivel + " - Habilidad: " + this.habilidad;
-    };
-    Mago.prototype.getAtaque = function () {
-        this.ataque.MostrarAtaque();
     };
     return Mago;
 }(Personaje_1.Personaje));

@@ -13,12 +13,8 @@ export class Ataque {
         this.danio = danio;
     }
     
-/*
-    MostrarAtaque(): string {
-        return "Ataque " + this.nombre + " Arma: " + this.arma + " - Daño: " + this.danio
-    }
-*/
-    MostrarAtaque(): void {
-        console.log("Ataque " + this.nombre + " Arma: " + this.arma + " - Daño: " + this.danio); 
+    mostrarAtaque(): string {
+        return ("Ataque " + this.nombre + " Arma: " + this.arma + " - Daño: " + this.danio); 
+        //return "Ataque " + this.nombre + " Arma: " + this.arma + " - Daño: " + this.danio; 
 }
 }
